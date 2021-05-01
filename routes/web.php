@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\LibroController;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +20,4 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/libros', [LibroController::class, 'index'])->name('libros');
